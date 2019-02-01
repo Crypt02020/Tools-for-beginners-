@@ -1,0 +1,12 @@
+old_guess=float(input("Number pls: "))
+tolerance=(old_guess ** 2)-10
+num = 10
+
+while(True):
+    new_guess = 0.5 * (float(old_guess) + (float(num) / float(old_guess)))
+    print("Heron's closest approximation is: ", new_guess)
+    old_guess = new_guess
+    tolerance = (old_guess ** 2)-10
+    if(tolerance<10 ** -14):
+        break
+print(old_guess, "is correct")
