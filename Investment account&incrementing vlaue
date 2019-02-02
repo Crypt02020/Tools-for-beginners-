@@ -1,0 +1,22 @@
+interest = 0.407
+payraise =  0.246
+month = 0
+months = 119
+total=1000
+deposit=1000
+
+money='${:,.2f}'.format(total)
+print("For the first month, yout balance is $", money)
+for month in range (months):
+    total += total * (.00407)
+    deposit += deposit * (.00246)
+    total += deposit
+    money='${:,.2f}'.format(total)
+    print("This month, your balance is:", (money))
+
+
+total += total * (.00407)
+deposit += deposit * (.00246)
+total += deposit
+money='${:,.2f}'.format(total)
+print("##################################### This month, your balance is:", (money), "#####################################")
